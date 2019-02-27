@@ -47,10 +47,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private BigInteger calcFactorial(BigInteger number) {
-        BigInteger sum = BigInteger.ZERO;
-        for (BigInteger i = number; i.compareTo(BigInteger.ZERO) == 1; number.subtract(BigInteger.ONE)) {
-            sum.add(i.multiply(i.subtract(BigInteger.ONE)));
+        BigInteger sum = BigInteger.ONE;
+//        for (BigInteger i = number; i.compareTo(BigInteger.ZERO) == 1; i = i.subtract(BigInteger.ONE)) {
+//            sum = sum.add(i.multiply(i.subtract(BigInteger.ONE)));
+//        }
+
+        while (number.compareTo(BigInteger.ZERO) == 1) {
+            sum = sum.add(sum.multiply(number.subtract(BigInteger.ONE)));
+            number = number.subtract(BigInteger.ONE);
         }
+
         return sum;
     }
 }

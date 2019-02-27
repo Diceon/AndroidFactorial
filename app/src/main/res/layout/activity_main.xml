@@ -27,7 +27,7 @@
                 android:layout_below="@+id/logoView"
                 android:layout_centerHorizontal="true"
                 android:text="@string/inputNumber"
-                android:textSize="40dp" />
+                android:textSize="30dp" />
 
             <EditText
                 android:id="@+id/inputNumberField"
